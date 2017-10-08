@@ -18,10 +18,10 @@ export class PeliculasService {
     hasta.setDate(hasta.getDate() + 7);
 
     const desdeStr = `${desde.getFullYear()}-${desde.getMonth() +
-      1}-${desde.getDay()}`;
+      1}-${desde.getDate()}`;
     const hastaStr = `${hasta.getFullYear()}-${hasta.getMonth() +
-      1}-${hasta.getDay()}`;
-    // tslint:disable-next-line:max-line-length
+      1}-${hasta.getDate()}`;
+
     const url = `${this
       .urlMoviedb}/discover/movie?primary_release_date.gte=${desdeStr}&primary_release_date.lte=${hastaStr}&api_key=${this
       .apikey}&language=es&callback=JSONP_CALLBACK`;
